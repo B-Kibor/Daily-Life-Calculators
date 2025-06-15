@@ -1,0 +1,196 @@
+/* Variables */
+:root {
+    --chai-color: #8b4513;
+    --boda-color: #3498db;
+    --mobile-color: #2e8b57;
+    --light-bg: #f9f9f9;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Typography */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 1.2em;
+}
+
+.calculator-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Card Styles */
+.calculator-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s;
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+}
+
+.calculator-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid;
+}
+
+.chai-card .calculator-header {
+    border-color: var(--chai-color);
+    color: var(--chai-color);
+}
+.boda-card .calculator-header {
+    border-color: var(--boda-color);
+    color: var(--boda-color);
+}
+.mobile-card .calculator-header {
+    border-color: var(--mobile-color);
+    color: var(--mobile-color);
+}
+
+/* Emoji */
+.emoji {
+    font-size: 2.5rem;
+    margin-right: 15px;
+}
+
+/* Inputs & Buttons */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.chai-card input:focus {
+    border-color: var(--chai-color);
+}
+.boda-card input:focus {
+    border-color: var(--boda-color);
+}
+.mobile-card input:focus {
+    border-color: var(--mobile-color);
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+.chai-card button {
+    background-color: var(--chai-color);
+}
+.boda-card button {
+    background-color: var(--boda-color);
+}
+.mobile-card button {
+    background-color: var(--mobile-color);
+}
+button:hover {
+    opacity: 0.9;
+}
+
+/* Results */
+.results {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+.chai-card .results {
+    background-color: #fff9e6;
+    border-left: 4px solid var(--chai-color);
+}
+.boda-card .results {
+    background-color: #eaf2f8;
+    border-left: 4px solid var(--boda-color);
+}
+.mobile-card .results {
+    background-color: #e8f8f0;
+    border-left: 4px solid var(--mobile-color);
+}
+
+/* Result Items */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.chai-card .result-item {
+    border-bottom: 1px dashed var(--chai-color);
+}
+.boda-card .result-item {
+    border-bottom: 1px dashed var(--boda-color);
+}
+.mobile-card .result-item {
+    border-bottom: 1px dashed var(--mobile-color);
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
