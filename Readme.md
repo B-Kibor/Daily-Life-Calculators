@@ -1,4 +1,4 @@
-# Kenyan Mini Apps Collection
+# Mini Apps Collection
 
 This repository contains three simple, beginner-friendly web apps related to everyday Kenyan use cases, demonstrating JavaScript DOM manipulation, user input handling, and basic calculations.
 
